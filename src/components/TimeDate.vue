@@ -52,7 +52,7 @@
     .time {
     color: white;
     font-size: 125px;
-    margin: 0;
+    margin: 0 0 0 4vh;
     padding: 0;
     line-height: 1;
     }

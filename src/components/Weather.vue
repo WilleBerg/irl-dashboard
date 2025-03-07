@@ -44,7 +44,10 @@
       }
     },
     mounted() {
-      this.fetchData();
+      this.fetchData(),
+      this.timerId = setInterval(() => {
+          this.fetchData();
+      }, 60000)
     },
     methods: {
       async fetchData() {
@@ -60,7 +63,7 @@
         } finally {
           this.loading = false;
         }
-      }
+      },
     }
   }
   </script>
@@ -72,7 +75,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
     box-sizing: border-box;
   }
   
