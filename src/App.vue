@@ -1,4 +1,6 @@
 <script setup>
+// import Bus from './components/Bus.vue';
+import Forecast from './components/Forecast.vue';
 import News from './components/News.vue';
 import TimeDate from './components/TimeDate.vue';
 import Weather from './components/Weather.vue';
@@ -7,13 +9,21 @@ import Weather from './components/Weather.vue';
 <template>
   <div class="container">
     <div class="time-container">
-      <TimeDate />
+      <div class="forecast-and-time-container">
+        <TimeDate />
+      </div>
       <Weather />
+    </div>
+    <div>
+        <Forecast />
     </div>
     <div>
       <News />
     </div>
   </div>
+  <!-- <div>
+    <Bus />
+  </div> -->
 </template>
 
 <style scoped>
@@ -22,6 +32,7 @@ import Weather from './components/Weather.vue';
   align-items: center;
   gap: 2vw;
 }
-.container {
+.forecast-and-time-container {
+  margin: 0 0 0 5vw;
 }
 </style>
